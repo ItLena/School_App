@@ -2,7 +2,7 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useRoutes } from 'react-router-dom'
-import NavBar from '../src/components/Navbar'
+import NavBar from './components/Navbar'
 import Home from '../src/pages/Home'
 
 import './App.css'

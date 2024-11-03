@@ -1,0 +1,38 @@
+[
+    {
+        "id": "d465bab6-95ec-427b-a572-48dccc0b5b4c",
+        "title": "Gryffindor",
+        "founder": "Godric Gryffindor",
+        "color": "red and gold",
+        "description": "courage, nerve and chivalry",
+        "mascot": "lion",
+        "image": "../../src/images/gryffindor.jpg"
+    },
+    {
+        "id": "885ca08d-1112-4c7a-baf9-5925419aa4fd",
+        "title": "Hufflepuff",
+        "founder": "Helga Hufflepuff",
+        "color": "yellow and black",
+        "description": "patience, justice and loyalty",
+        "mascot": "badger",
+        "image": "../../src/images/hufflepuff.jpg"
+    },
+    {
+        "id": "04ed7188-b435-4a9e-88d8-c78e5e6eb250",
+        "title": "Ravenclaw",
+        "founder": "Rowena Ravenclaw",
+        "color": "blue and bronze",
+        "description": "intelligence, wisdom and wit",
+        "mascot": "eagle",
+        "image": "../../src/images/ravenclaw.png"
+    },
+    {
+        "id": "05ec7198-b436-4o9j-99d8-c78e5a6eb281",
+        "title": "Slytherin",
+        "founder": "Salazar Slytherin",
+        "color": "green and silver",
+        "description": "ambition, cunning and leadership",
+        "mascot": "serpent",
+        "image": "../../src/images/slytherin.jpg"
+    }
+]

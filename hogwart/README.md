@@ -15,3 +15,6 @@ npm i react-axios
 
 Install rauting
 npm i react-router-dom
+
+Dark theme not working then run and restart app
+ npm i @emotion/react @emotion/styled

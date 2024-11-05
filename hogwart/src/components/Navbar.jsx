@@ -1,4 +1,4 @@
-import { AppBar, Box, CssBaseline, Toolbar, Typography, Button, Switch, colors } from '@mui/material';
+import { AppBar, Box, CssBaseline, Toolbar, Typography, Button, Switch } from '@mui/material';
 import PropTypes from 'prop-types'
 
 

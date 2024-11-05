@@ -1,23 +1,36 @@
-// import { useState } from 'react'
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { useState, useContext } from 'react'
+import { ThemeProvider,  createTheme  } from '@mui/material/styles';
+import { Container} from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useRoutes } from 'react-router-dom'
 import NavBar from './components/Navbar'
-import Home from '../src/pages/Home'
+import Home from './pages/Home'
+import Staffs from './pages/Staffs'
+import House from './pages/House';
 
 import './App.css'
 
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-  },
-});
 
 function App() {
-  // const [count, setCount] = useState(0)
-  let pages = useRoutes([
-    { path: "/", element: <Home /> },
-    // { path: "/cart", element: <Cart cartItems={cartItems} /> }
+  const [theme, setTheme] = useState(true)
+
+  const toggleTheme = () => {
+    setTheme(!theme);
+  };
+  const darkTheme = createTheme({
+    palette: {
+      mode: theme ? 'dark' : 'light', 
+        
+    },
+  
+  });
+
+
+  const links = useRoutes([
+    { path: "/", element: <Home/> },
+    { path: "home", element: <Home/> },
+    { path: "staffs", element: <Staffs/> },
+    { path: "house/:id", element: <House/> }
 
   ])
 
@@ -25,10 +38,12 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
   
-    <NavBar/>
-     
-        {pages}
-     
+      <NavBar theme={theme} toggleTheme={toggleTheme}/>
+   
+      <Container component="section" sx={{margin: '3rem'}}>          
+      {links}
+      </Container>
+    
     </ThemeProvider>
   )
 }

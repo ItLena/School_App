@@ -1,36 +1,31 @@
 import { useEffect, useState } from "react"
 import HouseCard from "../components/HouseCard"
 import axios from "axios";
-import { Container } from '@mui/material';
+import { Box, Typography, Paper } from '@mui/material';
 
-const Home = () =>{
+const Home = () => {
     const [houses, setHouses] = useState([]);
-    
-    useEffect(()=>{       
-        axios.get("../../public/data/houses.json") 
-        .then(res =>{
-            console.log("Houses:", res)
-            setHouses(res.data)
-        })
+
+    useEffect(() => {
+        axios.get("../../public/data/houses.json")
+            .then(res => {                
+                setHouses(res.data)
+            })
     }, [])
-    return(
-        <>
-        <h1>Hello Hogwart</h1>
-        <Container maxWidth="sm"
-         sx={{display: 'flex', flexWrap:"wrap", gap:"2rem" }}>
-            {
-                houses && houses.map((item) =>(
-                   <HouseCard
-                   key={item.id}
-                   house={item}
-                   /> 
-                )
-            )
-            }
-            
-        </Container>
-       
-        </>
+    return (
+        <Paper sx={{ p: 2, marginTop: '5rem', opacity: 0.95 }}>
+            <Typography  gutterBottom variant='h4'>Hogwarts Houses</Typography>
+            <Box maxWidth="sl" sx={{ display: 'flex', flexWrap: "wrap", gap: "2rem", justifyContent: 'center' }}>
+                {
+                    houses && houses.map((item) => (
+                        <HouseCard
+                            key={item.id}
+                            house={item}
+                        />
+                    )) 
+                }
+            </Box>
+        </Paper>
     )
 }
 export default Home

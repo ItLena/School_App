@@ -1,4 +1,4 @@
-import { Card, CardMedia, CardContent, Typography, CardActions, Button,Link } from "@mui/material"
+import { Card, CardMedia, CardContent, Typography, Link } from "@mui/material"
 import PropTypes from 'prop-types'
 
 const HouseCard = ({ house }) => {
@@ -11,18 +11,13 @@ const HouseCard = ({ house }) => {
         image={house.image}
       />
       <CardContent>
-        <Typography variant="h5" component="div">{house.title}</Typography>
+       <Link href="/house/:id"><Typography variant="h5" component="div">{house.title}</Typography></Link> 
         <Typography variant="caption" sx={{ color: 'text.secondary' }}>{house.description}</Typography>
       </CardContent>
-      <CardActions>
-      <Link href="/"><Button size="small">Learn More</Button></Link>
-    </CardActions>
-
     </Card>
   )
 }
-HouseCard.PropTypes = {
+HouseCard.propTypes = {
   house: PropTypes.object,
-
 }
 export default HouseCard

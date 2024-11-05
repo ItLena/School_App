@@ -1,6 +1,6 @@
-import { AppBar, Box, CssBaseline, Toolbar, Typography, Button, Switch } from '@mui/material';
+import { AppBar, Box, CssBaseline, Toolbar, Typography, Button, Switch, IconButton } from '@mui/material';
 import PropTypes from 'prop-types'
-
+import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material";
 
 const pages = ['home', 'staffs', 'house'];
 const NavBar = ({theme, toggleTheme}) => {
@@ -21,7 +21,22 @@ const NavBar = ({theme, toggleTheme}) => {
                <Button sx={{color: 'white'}} key={page} href={`/${page}`} >{page}</Button>
             ))   
           }  
-          <Switch checked={theme} onChange={toggleTheme}></Switch>
+          
+          <IconButton
+                  onClick={toggleTheme}
+                  sx={{
+                    p: 1,
+                    border: `1px ${theme.palette.text.disabled} solid`,
+                  }}
+                  size="large"
+                  color="inherit"
+                >
+                  {theme.palette.mode === "light" ? (
+                    <LightModeOutlined />
+                  ) : (
+                    <DarkModeOutlined color="action" />
+                  )}
+                </IconButton>
            </Box>
         </Toolbar>
       </AppBar>

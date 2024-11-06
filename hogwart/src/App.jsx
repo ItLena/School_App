@@ -32,7 +32,7 @@ function App() {
     { path: "/", element: <Home /> },
     { path: "home", element: <Home /> },
     { path: "staffs", element: <Staffs /> },
-    { path: "house/:id", element: <House /> }
+    { path: "houses", element: <House /> }
 
   ])
 

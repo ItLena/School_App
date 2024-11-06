@@ -1,8 +1,8 @@
-import { AppBar, Box, CssBaseline, Toolbar, Typography, Button, Switch, IconButton } from '@mui/material';
+import { AppBar, Box, CssBaseline, Toolbar, Typography, Button, IconButton } from '@mui/material';
 import PropTypes from 'prop-types'
 import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material";
 
-const pages = ['home', 'staffs', 'house'];
+const pages = ['home', 'staffs', 'houses'];
 const NavBar = ({theme, toggleTheme}) => {
   return (
     <Box sx={{ display: 'flex' }}>

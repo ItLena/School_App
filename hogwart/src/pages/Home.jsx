@@ -1,30 +1,17 @@
-import { useEffect, useState } from "react"
-import HouseCard from "../components/HouseCard"
-import axios from "axios";
-import { Box, Typography, Paper } from '@mui/material';
+
+import { Typography, Paper} from '@mui/material';
+import AccordionInfo from '../components/Accordion';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 
 const Home = () => {
-    const [houses, setHouses] = useState([]);
-
-    useEffect(() => {
-        axios.get("../../public/data/houses.json")
-            .then(res => {                
-                setHouses(res.data)
-            })
-    }, [])
-    return (
-        <Paper sx={{ p: 2, marginTop: '5rem', opacity: 0.95 }}>
-            <Typography  gutterBottom variant='h4'>Hogwarts Houses</Typography>
-            <Box maxWidth="sl" sx={{ display: 'flex', flexWrap: "wrap", gap: "2rem", justifyContent: 'center' }}>
-                {
-                    houses && houses.map((item) => (
-                        <HouseCard
-                            key={item.id}
-                            house={item}
-                        />
-                    )) 
-                }
-            </Box>
+    return(
+        <Paper sx={{p:2, marginTop: '3rem', opacity: 0.95}}>
+            <Typography variant='h3' gutterBottom>
+            Welcome to Hogwarts School of Witchcraft and Wizardry
+            </Typography>
+            <Typography variant="subtitle1" gutterBottom>Your Magical Journey Begins Here <AutoAwesomeIcon/></Typography>
+           
+            <AccordionInfo sx={{marginTop: '3rem'}}/>
         </Paper>
     )
 }

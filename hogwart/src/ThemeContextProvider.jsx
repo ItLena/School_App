@@ -7,10 +7,10 @@ import {StyledEngineProvider, ThemeProvider, createTheme} from "@mui/material/st
   });
   
   export function ThemeContextProvider({ children }) {
-    const [mode, setMode] = useState('light');
+    const [mode, setMode] = useState('dark');
   
     const toggleTheme = () => {
-      setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+      setMode((prevMode) => (prevMode === "dark" ? "light" : "dark"));
     };
   
     const theme = useMemo(

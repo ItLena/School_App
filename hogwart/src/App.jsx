@@ -7,32 +7,20 @@ import NavBar from './components/Navbar'
 import Home from './pages/Home'
 import Staffs from './pages/Staffs'
 import House from './pages/House';
+import PersonCard from './components/PersonCard.jsx';
 import { ThemeContext } from './ThemeContextProvider.jsx';
 import './App.css'
 
-
-function App() {
-  // const [theme, setTheme] = useState(true)
-
-  // const toggleTheme = () => {
-  //   setTheme(!theme);
-  // };
-  // const appTheme = createTheme({
-  //   palette: {
-  //     mode: theme ? 'dark' : 'light', 
-
-  //   },
-
-  // });
+function App() {  
   const theme = useTheme();
   const { toggleTheme } = useContext(ThemeContext);
-
 
   const links = useRoutes([
     { path: "/", element: <Home /> },
     { path: "home", element: <Home /> },
     { path: "staffs", element: <Staffs /> },
-    { path: "houses", element: <House /> }
+    { path: "houses", element: <House /> },
+    { path: "person/:id", element: <PersonCard /> },
 
   ])
 

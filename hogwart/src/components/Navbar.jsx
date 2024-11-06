@@ -21,21 +21,13 @@ const NavBar = ({ theme, toggleTheme }) => {
               <Button sx={{ color: 'white' }} key={page} href={`/${page}`} >{page}</Button>
             ))
             }
-
             <IconButton
               onClick={toggleTheme}
-              sx={{
-                p: 1,
-                border: `1px ${theme.palette.text.disabled} solid`,
-              }}
+              sx={{ p: 1, border: `1px ${theme.palette.text.disabled} solid` }}
               size="large"
               color="inherit"
             >
-              {theme.palette.mode === "light" ? (
-                <LightModeOutlined />
-              ) : (
-                <DarkModeOutlined color="action" />
-              )}
+              {theme.palette.mode === "light" ? <LightModeOutlined/> : <DarkModeOutlined color="action"/>}
             </IconButton>
           </Box>
         </Toolbar>

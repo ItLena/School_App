@@ -14,7 +14,7 @@ const AccordionInfo = () => {
         <AccordionDetails>
           To educate young witches and wizards in the magical arts and prepare them to become responsible members of the wizarding world.
         </AccordionDetails>
-      </Accordion>
+      </Accordion>      
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -37,10 +37,7 @@ const AccordionInfo = () => {
           Requirements:
         </AccordionSummary>
         <AccordionDetails>
-          <List
-
-            aria-label="contacts"
-          >
+          <List aria-label="contacts">
             <ListItem disablePadding><Typography variant="overline" sx={{ paddingRight: '10px' }}>Age:</Typography> Turn 11 before September 1st.</ListItem>
             <ListItem disablePadding><Typography variant="overline" sx={{ paddingRight: '2px' }}>Magical Abilities:</Typography>  A natural inclination towards magic, preferably with a few accidental spell castings under your belt.</ListItem>
             <ListItem disablePadding><Typography variant="overline" sx={{ paddingRight: '2px' }}>A Hogwarts Letter:</Typography> This mystical invitation will arrive by owl post on your 11th birthday.</ListItem>

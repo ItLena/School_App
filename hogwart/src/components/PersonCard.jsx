@@ -6,24 +6,23 @@ import axios from 'axios'
 const PersonCard = () => {
     const { id } = useParams();
     let [person, setPerson] = useState({
-        image: '',        
+        image: '',
         name: '',
         gender: '',
         house: ''
     });
-    useEffect(() => {        
-            axios.get(`https://hp-api.onrender.com/api/character/${id}`)
-                .then(res => {
-                    setPerson({
-                        name: res.data[0].name,
-                        gender: res.data[0].gender,
-                        house: res.data[0].house,
-                        image: res.data[0].image,
-                        species: res.data[0].species,
-                    })
-                })        
+    useEffect(() => {
+        axios.get(`https://hp-api.onrender.com/api/character/${id}`)
+            .then(res => {
+                setPerson({
+                    name: res.data[0].name,
+                    gender: res.data[0].gender,
+                    house: res.data[0].house,
+                    image: res.data[0].image,
+                    species: res.data[0].species,
+                })
+            })
     }, [id])
-
 
     return (
         <Card sx={{ p: 2, marginTop: '3rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>

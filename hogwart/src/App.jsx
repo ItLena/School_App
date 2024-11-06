@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { useTheme} from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import { Container } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useRoutes } from 'react-router-dom'
@@ -12,8 +12,7 @@ import { ThemeContext } from './ThemeContextProvider.jsx';
 import './App.css'
 
 
-
-function App() {  
+function App() {
   const theme = useTheme();
   const { toggleTheme } = useContext(ThemeContext);
 
@@ -23,7 +22,6 @@ function App() {
     { path: "staffs", element: <Staffs /> },
     { path: "houses", element: <House /> },
     { path: "person/:id", element: <PersonCard /> },
-
   ])
 
   return (

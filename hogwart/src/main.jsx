@@ -8,8 +8,8 @@ import { ThemeContextProvider } from './ThemeContextProvider.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-    <ThemeContextProvider>
-      <App />
+      <ThemeContextProvider>
+        <App />
       </ThemeContextProvider>
     </BrowserRouter>
   </StrictMode>,

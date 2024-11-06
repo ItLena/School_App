@@ -11,7 +11,7 @@ const HouseCard = ({ house }) => {
         image={house.image}
       />
       <CardContent>
-       <Link href="/house/:id"><Typography variant="h5" component="div">{house.title}</Typography></Link> 
+        <Link href="/house/:id"><Typography variant="h5" component="div">{house.title}</Typography></Link>
         <Typography variant="caption" sx={{ color: 'text.secondary' }}>{house.description}</Typography>
       </CardContent>
     </Card>

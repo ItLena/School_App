@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-
+// import { Link } from 'react-router-dom';
 import axios from 'axios'
-import {  TableContainer, Avatar,  Typography, TableRow,Paper, TableHead, Table, TableCell, TableBody } from '@mui/material';
+import { TableContainer, Avatar, Link, Typography, TableRow,Paper, TableHead, Table, TableCell, TableBody } from '@mui/material';
 
 const Staffs = () =>{
 
@@ -42,7 +42,7 @@ const Staffs = () =>{
         src={`${row.image}?w=248&fit=crop&auto=format`}
       />
           </TableCell>
-          <TableCell align="left">{row.name}</TableCell>
+          <TableCell align="left"><Link href={`person/${row.id}`}>{row.name}</Link></TableCell>
           <TableCell align="left">{row.dateOfBirth}</TableCell>
           <TableCell align="left">{row.house}</TableCell>
           <TableCell align="left">{row.patronus}</TableCell>

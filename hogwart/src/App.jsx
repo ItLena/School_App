@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { useTheme } from '@mui/material/styles';
+import { useTheme} from '@mui/material/styles';
 import { Container } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useRoutes } from 'react-router-dom'
@@ -10,6 +10,8 @@ import House from './pages/House';
 import PersonCard from './components/PersonCard.jsx';
 import { ThemeContext } from './ThemeContextProvider.jsx';
 import './App.css'
+
+
 
 function App() {  
   const theme = useTheme();
